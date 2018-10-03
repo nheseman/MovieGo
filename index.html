@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Favorite Movies</title>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <!-- FA Icons Library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <!-- Bootstrap Library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: rgb(0,0,0)">
+        <!-- Navbar content -->
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-md jumbotron-fluid">
+        <div class="image-box">
+            <img src="assets/images/film-strip.png">
+        </div>
+        <h1 span class="fas fa-film fa-2x"> MovieGO!</h1>
+        <p class="lead"> Get more than just information about your favorite movies! Now free fun gifs!</p>
+        </p>
+        <!-- Added the modal button -->
+        <div class="container">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Register</button>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Join the MovieGo Club Today!</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal display form group -->
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="inputFirstUserName">First Name</label>
+                                    <input class="form-control " placeholder="John" type="text" id="inputFirstName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputLastUserName">Last Name</label>
+                                    <input class="form-control " placeholder="Smith" type="text" id="inputLastName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputUserEmail">Email</label>
+                                    <input class="form-control" placeholder="name@email.com" type="text" id="inputEmail">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-default" id="userSubmit" data-dismiss="modal">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-container">
+        <div class="row">
+    <!-- Movie Search -->
+    <div class="poster-display col-4 col-md">
+        <label for="input">Search for a Movie</label>
+        <input id="user-input" type="text">
+        <button id="searchMovie">SEARCH</button>
+    </div>
+
+    <div class="giffy-block">
+        <!-- Empty div: display movie information -->
+        <div class="col-6" id="infoDisp"></div>
+        <!-- Empty div: display gifs -->
+        <div class="col-6" id="gifDisp"></div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <p> &copy;Copyright 2018 Marinsky | Heseman | Beaman </p>
+        <img class="ukans" src="assets/images/ukans.png" style="height: 30px; width: 180px">
+    </div>
+
+    <!-- Javascript Libraries-->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>
