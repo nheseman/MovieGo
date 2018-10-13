@@ -3,7 +3,7 @@ $("#searchMovie").on("click", function(event){
     var movie = $("#user-input").val();
     //variables for API URLS    
     var OMDBURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=88ef9d01";
-    var giphyURL =  "https://api.giphy.com/v1/gifs/search?q=" + movie + "&api_key=Yqwe8ISj3NU74ZnryO8nS98c8OFs880Q&limit=5" ;
+    var giphyURL =  "https://api.giphy.com/v1/gifs/search?q=" + movie + "&api_key=Yqwe8ISj3NU74ZnryO8nS98c8OFs880Q&limit=15" ;
     //First AJAX call for OMDB
     $.ajax({
         url: OMDBURL,
@@ -21,12 +21,13 @@ $("#searchMovie").on("click", function(event){
        
     //Creating new objects for the responses to attach to
         var newDiv = $("<div class= movieStats>");
-        var p1 = $("<h2>").text(title);
-        var p2 = $("<h3>").text(year);
-        var p3 = $("<h3>").text(plot);
-        var p4 = $("<h3>").text(actors);
-        var p5 = $("<h3>").text(rating);
-        var p6 = $("<img>").attr("src", poster)
+        var p1 = $("<img>").attr("src", poster)
+        var p2 = $("<h2>").text(title);
+        var p3 = $("<h3>").text(year);
+        var p4 = $("<p>").text(plot);
+        var p5 = $("<p>").text(actors);
+        var p6 = $("<p>").text(rating);
+        
     //appending all new objects to newDiv, then attaching newDiv to the page
         newDiv.append(p1,p2,p3,p4,p5,p6);
         $("#infoDisp").prepend(newDiv);
@@ -77,7 +78,7 @@ $(document).ready(function () {
 		$("#inputFirstName").val("");
 		$("#inputLastName").val("");
 		$("#inputEmail").val("");
-		
-		//return false;
+        
+	/*	return false;  */
     });
 });
